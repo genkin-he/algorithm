@@ -17,19 +17,19 @@ import "fmt"
 //
 //因为小的元素会慢慢地浮到顶端，很像碳酸饮料的汽泡，会冒上去，所以这就是冒泡排序取名的来源。
 
-func BubbleSort(arry []int) {
-	lena := len(arry)
+func BubbleSort(list []int) {
+	lena := len(list)
 	for i := 0; i <= lena-1; i++ {
 		for j := 0; j < lena-i-1; j++ {
-			if arry[j] > arry[j+1] {
-				arry[j], arry[j+1] = arry[j+1], arry[j]
+			if list[j] > list[j+1] {
+				list[j], list[j+1] = list[j+1], list[j]
 			}
 		}
 	}
 }
 
 func main() {
-	var arry = []int{5, 9, 1, 6, 8, 14, 6, 49, 25, 4, 6, 3}
-	BubbleSort(arry)
-	fmt.Println(arry)
+	var list = []int{5, 9, 1, 6, 8, 14, 6, 49, 25, 4, 6, 3}
+	BubbleSort(list)
+	fmt.Println(list)
 }
